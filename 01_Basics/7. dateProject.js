@@ -29,8 +29,10 @@ if(seconds < 10){
 let meridian = "AM"
 if(hour > 12){
     hour =  hour - 12
-    hour = "0" + hour
     meridian = "PM"
+    if(hour > 10){
+        hour = "0" + hour
+    }
 }
 
 console.log(`${date}/${month}/${year} ${hour}:${minutes}:${seconds} ${meridian} ${day}`);
