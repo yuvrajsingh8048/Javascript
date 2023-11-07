@@ -36,8 +36,8 @@ const obj3 = {5: "e", 6: "f"}
 
 // To merge all object in a single object
 
-// const objMain = Object.assign({}, obj1, obj2, obj3) // Syntax: Object.Assign(target, source) but but it is outdated
-
+// const objMain = Object.assign({}, obj1, obj2, obj3) // Syntax: Object.Assign(target, source) but but it is outdated, so for use use 'spread' operator
+ 
 const objMain = {...obj1, ...obj2, ...obj3} // Spread operator
 // console.table(objMain)
 
@@ -51,10 +51,15 @@ console.log(Object.entries(objMain))
 // +++++++++++++++++ Part 3 ++++++++++++++++++++++++++++
 const course = {
     courseName: "Sigma Batch",
-    price: 3999,
+    price: "Rs 3999",
     tutor: "PW"
 }
 
 // Destructurer
+// Technique 1
+const {price} = course
+// console.log(price) // 3999
+
+// Technique 2
 const {tutor: instructor} = course
 // console.log(instructor) // PW

@@ -9,7 +9,7 @@ Truthy Values => Except falsy all are truthy but some surprising examples are
 "0", "false", " ", [], {}, function (){}  => they all are truthy values
 */
 
-const user = " "
+const user = NaN
 
 if(user){
     console.log("Condition assume to be True")

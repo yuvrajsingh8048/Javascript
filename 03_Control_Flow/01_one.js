@@ -22,11 +22,7 @@ console.log(varOne)
 console.log(varTwo)
 console.log(varThree)
 
-
-
-
-
-
+// Switch Case
 const ch = 4
 
 switch(false){

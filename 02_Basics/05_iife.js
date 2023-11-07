@@ -11,7 +11,7 @@
     console.log("This IIFE is called Named IIFE")
 })();
 
-// By arguments and parameters passed
+// IIFE with arguments and parameters
 ((userName) => {
     console.log(`Hello ${userName}, Welcome to VS code......`)
 })("yuvraj")

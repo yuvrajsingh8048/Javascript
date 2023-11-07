@@ -27,10 +27,10 @@ Stack (Primitive) and Heap (Non-Primitive)
 */
 
 //Stack (Primitive)
-let name1 = "Yuvraj Singh"
-let name2 = "Robin Singh"
+let name1 = "Matt Henry"
+let name2 = "Jimmy Anderson"
 
-name2 = "Roma Singh"
+name2 = "Jimmy Neesham"
 
 // console.log(name1)
 // console.log(name2)
@@ -46,4 +46,4 @@ let obj2 = obj1
 obj2.name = "Unacademy"
 
 // console.log(obj1.name)  Name will also change becoz of call by refernece
-console.log(obj2.name)
+// console.log(obj2.name)

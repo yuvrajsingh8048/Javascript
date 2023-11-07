@@ -4,8 +4,7 @@ const user = {
     greet: function (){
         // console.log(`Hello ${this.userName}, welcome to our website...`)
     }
-    /*This refers to current context
-    */
+    // "This" refers to current context
 }
 // user.greet()
 
@@ -16,11 +15,11 @@ const user = {
 const one = () => {
     return "Chai Lob hai hamara!!!"
 }
-console.log(one())
+// console.log(one())
 
 // ShortCut for Arrow Function => Implicit
-const two = () => ("I dnt like Coffee!!!!") // () => must not use return keyword and {} must use return keyword
-console.log(two())
+const two = () => ("I dnt like Coffee!!!!") // () => no need to use return keyword but in {} case you must use return keyword
+// console.log(two())
 
-const three = () => ({someWord: "Both Chai and Coffee are Lob"}) // Implicit by returning an Object        *********** Interesting......
-console.log(three())
+const three = () => ({someTruth: "Both Chai and Coffee are my Lob"}) // Implicit by returning an Object        *********** Interesting......
+// console.log(three())

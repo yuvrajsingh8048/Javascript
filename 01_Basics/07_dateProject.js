@@ -15,6 +15,9 @@ let weekday = ["Monday", "Tueday", "Wednesday", "Thursday", "Friday", "Saturday"
 let day = weekday[myDate.getDay()]
 
 let hour = myDate.getHours()
+if(hour < 10){
+    hour = "0" + hour
+}
 
 let minutes = myDate.getMinutes()
 if(minutes < 10){
