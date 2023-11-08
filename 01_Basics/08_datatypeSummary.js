@@ -28,9 +28,8 @@ Stack (Primitive) and Heap (Non-Primitive)
 
 //Stack (Primitive)
 let name1 = "Matt Henry"
+name2 = name1
 let name2 = "Jimmy Anderson"
-
-name2 = "Jimmy Neesham"
 
 // console.log(name1)
 // console.log(name2)
