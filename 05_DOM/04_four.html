@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Part 4</title>
+</head>
+<body>
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+
+    <script>
+
+        // Add
+        function addLang(langName){
+            let li = document.createElement('li')
+
+            // Kaam ho jaata hai pr accha method nhi hai .innerHTMl => issme saaara element traverse hota hai....Kam use kro!!!!!!!!!!
+            // li.innerHTML = `${langName}`
+            // document.querySelector('.language').appendChild(li)
+
+            // Best Method to add text
+
+           li.appendChild(document.createTextNode(langName))
+           document.querySelector('.language').appendChild(li)
+        }
+        addLang("Python")
+        addLang("TypeScript")
+
+        // Edit  => Method 1 (Best)
+        const secLang = document.querySelector("li:nth-child(2)")
+        const editLi = document.createElement('li')
+        editLi.textContent = "Mojo"
+        secLang.replaceWith(editLi)
+
+        // Edit => Method 2 (Not Good)
+        const firstLang = document.querySelector("li:first-Child")
+        firstLang.outerHTML = "<li> HTML, CSS & Javascript </li>"
+
+        // Remove
+        const lastLang = document.querySelector('li:last-Child')
+        lastLang.remove()
+
+    </script>
+</body>
+</html>

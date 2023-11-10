@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Part 2</title>
+</head>
+<body style="background-color: #212121; color: antiquewhite;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tueday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+        <div class="day">Saturday</div>
+        <div class="day">Sunday</div>
+    </div>
+</body>
+
+<script>
+
+   const parent =  document.querySelector('.parent')
+   console.log(parent)
+//    console.log(parent.firstElementChild.innerText)   // Monday
+//    console.log(parent.lastElementChild.textContent)  // Sunday
+
+for (let i = 0; i < parent.children.length; i++) {
+    if(parent.children[i].innerText == "Saturday" || parent.children[i].innerText == "Sunday"){
+        console.log(`Weekend Day: ${parent.children[i].innerText}`)
+    }
+    else console.log(`Week Day: ${parent.children[i].innerText}`);
+}
+parent.children[0].style.color = "red"
+parent.children[1].style.color = "yellow"
+parent.children[2].style.color = "green"
+parent.children[3].style.color = "blue"
+parent.children[4].style.color = "aqua"
+parent.children[5].style.color = "violet"
+parent.children[6].style.color = "pink"
+
+</script>
+</html>
