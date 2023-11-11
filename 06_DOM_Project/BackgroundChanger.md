@@ -1,9 +1,9 @@
 # Project Related To DOM
 
-# Project Link
-[Click here](https://dom-project-chaiaurcode-bikxtj.stackblitz.io)
+## **Background Changer**
 
-# Javascript Code File
+
+## _**Javascript Code File**_
 ``` javascript
 const button = document.querySelectorAll('.button');
 const body = document.querySelector('body');
@@ -30,7 +30,7 @@ button.forEach((button) => {
 });
 
 ```
-# HTML Code File
+## _**HTML Code File**_
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -78,8 +78,8 @@ button.forEach((button) => {
 
 ```
 
-# CSS Code File
-```
+## _**CSS Code File**_
+``` css
 html {
   margin: 0;
 }
