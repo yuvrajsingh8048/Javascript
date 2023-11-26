@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <button id="greet">Hello, Good Morning</button>
+    <h1>Studying About the Events............</h1>
+   <div>
+    <ul id="animals"> Animals
+        <li id="lion">Lion</li>
+        <li id="dog">Dog</li>
+        <li id="cat">Cat</li>
+        <li id="deer">Deer</li>
+        <li id="bear">Bear</li>
+        <li id="fox">Fox</li>
+        <li id="example"><img src="./example.jpg" alt=""></li>
+    </ul>
+   </div>
+</body>
+
+<script>
+    /*
+    first Arguments => events => click, double click, keypress, keyup and many more
+    Second Argumnet => Callback
+    Third Arguments => Event Propagation => True or False (Optional) => default is false
+    // false => Event Public, true => Event Capturing/
+    */
+    document.querySelector('#greet').addEventListener('click', function (e){
+        // E => Event Object
+        // What are the object need to mainly focus
+        // type, timestamp, defaultPrevented, target, toElement,srcElement, currentTargett, clientX, clientY, altKey, cntrlKey, keyCode
+        // console.log(e)
+        // console.log(e.target)
+    }, false)
+
+    // document.querySelector('#animals').addEventListener('click', function (e){
+    //     console.log("You Clicked the Parent Node, Animals!!!!")
+    // }, false)
+    // document.querySelector('#animals').addEventListener('click', function (e){
+    //     console.log("You Clicked the Parent Node, Animals!!!!")
+    // }, true)
+    document.querySelector('#cat').addEventListener('click', function (e){
+        // console.log("You Clicked the Child Node, CAT!!!!")
+        // e.stopPropagation()
+    }, false)
+
+    // To remove a child node
+    document.querySelector('#animals').addEventListener('click', function (e){
+        // console.log(e)
+        // console.log(e.target)
+        // console.log(e.target.tagName) // for list item => LI for immage => IMG
+
+        if(e.target.tagName === 'IMG'){
+            let removeIt = e.target.parentNode // li (img without Parent Node)
+            console.log(removeIt)
+            console.log(e.target.id)
+            removeIt.parentNode.removeChild(removeIt)
+        }
+        else if (e.target.tagName === 'LI'){
+            let removeIt = e.target // li
+            console.log(removeIt)
+            removeIt.parentNode.removeChild(removeIt)
+        }
+    }, false)
+
+</script>
+</html>
