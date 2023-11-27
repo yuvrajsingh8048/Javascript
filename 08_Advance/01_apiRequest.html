@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body style="background-color: #414141; color: white;">
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus dolorem, tenetur dicta asperiores libero, eveniet voluptatibus optio unde quae dolorum corporis ullam, soluta incidunt earum nihil nemo sequi iste itaque? Perferendis ad fugit accusantium veniam praesentium aperiam pariatur laborum et dignissimos officia odio voluptatibus reiciendis corporis, illum dicta dolor nesciunt!
-    
+    <button id="userId">Click to get user ID</button>
+    <p id="userInfo"></p>
 </body>
 <script>
+    const userId = document.querySelector('#userId')
+    const userInfo = document.querySelector('#userInfo')
+
     const reqURL = 'https://api.github.com/users/yuvrajsingh8048'
     const xhr = new XMLHttpRequest();
     xhr.open('GET', reqURL)
-    console.log("Initial ready state : ",xhr.readyState)
-    xhr.onreadystatechange = function (){
+    console.log("Initial ready state : ", xhr.readyState)
+    xhr.onreadystatechange = function () {
         console.log(xhr.readyState)
-        if(xhr.readyState === 4){
+        if (xhr.readyState === 4) {
             const data = JSON.parse(this.responseText)
-            console.log(data)
+            userId.addEventListener('click', function (e) {
+                console.log(data)
+            }, false)
+
         }
     }
     xhr.send()
 </script>
+
 </html>
