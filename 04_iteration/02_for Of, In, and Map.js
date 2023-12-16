@@ -12,8 +12,7 @@ const capital = {
 }
 
 for (const key in capital) {
-        // console.log(`State : ${capital[key]}`);
-    
+        // console.log(`${key} : ${capital[key]}`);
 }
 
 // for of
@@ -29,7 +28,7 @@ mapOne.set('USA', 'United States of America')
 mapOne.set('UK', 'United Kingdom')
 mapOne.set('IN', 'INDIA')  // It will not store in map coz map store unique values only.....Case Sensitive for KEYS only not for Values
 
-console.log(mapOne)
+// console.log(mapOne)
 
 // To store Key Value in interesting way.....
 // This method can only be run in Map

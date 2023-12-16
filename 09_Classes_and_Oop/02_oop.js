@@ -18,8 +18,8 @@ function user(username, isLogin, loginCount){
 }
 
 const userOne = new user("yuvraj", true, 8)
-const userTwo = new user("jimmy", false, 5)
-const userThree = new user("thor", true, 2)
+const userTwo =  user("jimmy", false, 5) // if not use 'new' method then userThree will overwrite userTwo
+const userThree = user("thor", true, 2)
 console.log(userOne)
 console.log(userTwo)
 console.log(userThree)
